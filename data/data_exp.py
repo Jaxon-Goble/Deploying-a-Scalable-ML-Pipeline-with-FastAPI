@@ -10,3 +10,4 @@ data_path = os.path.join(project_path, "data", "census.csv")
 df = pd.read_csv(data_path)
 
 print(df.head(1))
+print(df.shape)

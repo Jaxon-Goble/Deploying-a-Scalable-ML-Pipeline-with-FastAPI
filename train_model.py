@@ -14,16 +14,13 @@ from ml.model import (
     train_model,
 )
 
-###
 project_path = os.getcwd()
 data_path = os.path.join(project_path, "data", "census.csv")
 print(data_path)
 data = pd.read_csv(data_path)
 
-###
 train, test = train_test_split(data, test_size=0.15, random_state=14)
 
-# DO NOT MODIFY
 cat_features = [
     "workclass",
     "education",
@@ -35,11 +32,10 @@ cat_features = [
     "native-country",
 ]
 
-###
 X_train, y_train, encoder, lb = process_data(
     train,
     categorical_features=cat_features,
-    label="salary"
+    label="salary",
     training=True,
     )
 
@@ -52,7 +48,6 @@ X_test, y_test, _, _ = process_data(
     lb=lb,
 )
 
-###
 model = train_model(X_train, y_train)
 
 # save the model and the encoder
@@ -66,7 +61,6 @@ model = load_model(
     model_path
 ) 
 
-# TODO: use the inference function to run the model inferences on the test dataset.
 preds = inference(model, X_test)
 
 # Calculate and print the metrics
