@@ -29,8 +29,6 @@ def categorical_features():
     return cat_features
 
 
-# Data
-# TODO: implement the first test. Change the function name and input as needed
 def test_null_values(test_data: pd.DataFrame):
     """
     Takes in a dataframe as input, and check whether or not it has zero null values.
@@ -41,8 +39,6 @@ def test_null_values(test_data: pd.DataFrame):
     assert null_count == 0, f"Dataset has {null_count} null values."
 
 
-# Data
-# TODO: implement the second test. Change the function name and input as needed
 def test_data_split(test_data: pd.DataFrame):
     """
     Checks train_test_split dataset outputs to ensure they are the correct proportions and they add up to the original dataset.
@@ -54,8 +50,6 @@ def test_data_split(test_data: pd.DataFrame):
     assert 0.149 < (test.shape[0] / test_data.shape[0]) < 0.151
 
 
-# Model
-# TODO: implement the third test. Change the function name and input as needed
 def test_model_predictions(test_data: pd.DataFrame, categorical_features: list[str]):
     """
     Checks model predictions array for lack of results and/or incorrect results (not 0 or 1).
