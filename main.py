@@ -26,10 +26,10 @@ class Data(BaseModel):
     hours_per_week: int = Field(..., example=40, alias="hours-per-week")
     native_country: str = Field(..., example="United-States", alias="native-country")
 
-path = os.path.join(os.get_cwd(), "model", "encoder.pkl")
+path = os.path.join(os.getcwd(), "model", "encoder.pkl")
 encoder = load_model(path)
 
-path = os.path.join(os.get_cwd(), "model", "model.pkl")
+path = os.path.join(os.getcwd(), "model", "model.pkl")
 model = load_model(path)
 
 app = FastAPI()
