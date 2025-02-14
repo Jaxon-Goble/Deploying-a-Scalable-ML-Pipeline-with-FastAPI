@@ -21,6 +21,9 @@ data = pd.read_csv(data_path)
 
 train, test = train_test_split(data, test_size=0.15, random_state=14)
 
+print(train.shape)
+print(test.shape)
+
 cat_features = [
     "workclass",
     "education",
